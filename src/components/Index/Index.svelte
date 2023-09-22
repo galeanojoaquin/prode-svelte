@@ -1,4 +1,28 @@
 <script>
+  import axios from "axios";
+
+  const callFetch = () => {
+    console.log(axios.isCancel("something"));
+
+    var config = {
+      method: "get",
+      url: "https://v3.football.api-sports.io/status",
+      headers: {
+        "x-rapidapi-key": "47f1f2c03bmshcb255e7a60214d4p133e09jsn688b72c66b9e",
+        "x-rapidapi-host": "v3.football.api-sports.io",
+      },
+    };
+
+    axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
+  callFetch();
 </script>
 
 <div class="nes-container with-title is-centered">
