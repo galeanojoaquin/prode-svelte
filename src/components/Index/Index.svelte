@@ -6,16 +6,16 @@
 
     var config = {
       method: "get",
-      url: "https://v3.football.api-sports.io/status",
+      url: "https://v3.football.api-sports.io/fixtures/rounds?season=2023&league=1032",
       headers: {
-        "x-rapidapi-key": "47f1f2c03bmshcb255e7a60214d4p133e09jsn688b72c66b9e",
+        "x-rapidapi-key": "679f606edc2e73ec617c612986387614",
         "x-rapidapi-host": "v3.football.api-sports.io",
       },
     };
 
     axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
