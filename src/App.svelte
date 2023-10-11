@@ -1,8 +1,9 @@
 <script>
-  import { Router, Link, Route } from "svelte-routing";
+  import { Router, Route } from "svelte-routing";
   import NotFound from "./components/Layout/NotFound.svelte";
   import Index from "./components/Index/Index.svelte";
   import Navbar from "./components/Layout/Navbar.svelte";
+  import Teams from "./components/Teams/Teams.svelte";
   export let basepath = "/prode-svelte";
 </script>
 
@@ -18,6 +19,7 @@
         <div>
           <Route path="/" component={Index} />
           <Route path="/*" component={NotFound} />
+          <Route path="/teams" component={Teams} />
         </div>
       </div>
     </div>

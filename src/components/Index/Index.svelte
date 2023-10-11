@@ -17,7 +17,7 @@
 
     axios(config)
       .then(function (response) {
-        console.log(response.data.response)
+        console.log(response.data.response);
         arrayTeams = response.data.response;
         console.log(arrayTeams);
       })
@@ -29,20 +29,18 @@
   callFetch();
 </script>
 
-<div class="container-fluid col-xl-12">
-  <p class="text-center">
-    Equipos de fútbol en Argentina
-  </p>
-  <div class="container-fluid text-center">
-    {#each arrayTeams as team (team.team.id)}
-      <div class="nes-container">
-        <img src={team.team.logo} alt={team.team.name} width="80" />
-        <h3>{team.team.name}</h3>
-        <p>Estadio: {team.venue.name}</p>
-        <p>Dirección: {team.venue.address}</p>
-        <p>Ciudad: {team.venue.city}</p>
-        <p>Capacidad: {team.venue.capacity}</p>
-      </div>
-    {/each}
+<div class="container">
+  <div class="row">
+    <p class="text-center">Equipos de fútbol en Argentina</p>
+      {#each arrayTeams as team (team.team.id)}
+        <div class="col-4 text-center">
+          <img src={team.team.logo} alt={team.team.name} width="80" />
+          <h3>{team.team.name}</h3>
+          <p>Estadio: {team.venue.name}</p>
+          <p>Dirección: {team.venue.address}</p>
+          <p>Ciudad: {team.venue.city}</p>
+          <p>Capacidad: {team.venue.capacity}</p>
+        </div>
+      {/each}
   </div>
 </div>
