@@ -10,16 +10,12 @@
 <Router {basepath}>
   <Navbar />
   <main>
-    <!-- <nav>
-      <Link to="/about">About</Link>
-      <Link to="/blog">Blog</Link>
-    </nav> -->
     <div class="container">
       <div class="container pb-5 mb-5">
         <div>
           <Route path="/" component={Index} />
           <Route path="/*" component={NotFound} />
-          <Route path="/teams" component={Teams} />
+          <!-- <Route path="/teams" component={Teams} /> -->
         </div>
       </div>
     </div>
@@ -29,5 +25,7 @@
 <style>
   :global(*) {
     box-sizing: border-box;
+    background-color: #00476B;
+    color: aliceblue;
   }
 </style>
